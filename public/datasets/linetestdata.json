@@ -1,23 +1,33 @@
 [
   {
     "date": "1/13/20",
-    "value": 135.98
+    "driving": 135.98,
+    "walking": 120,
+    "transit": 100
   },
   {
     "date": "1/14/20",
-    "value": 95.98
+    "driving": 95.98,
+    "walking": 100,
+    "transit": 90
   },
   {
     "date": "1/15/20",
-    "value": 125.98
+    "driving": 120,
+    "walking": 110,
+    "transit": 80
   },
 
   {
     "date": "1/16/20",
-    "value": 165.98
-  },
+    "driving": 143,
+    "walking": 115,
+    "transit":  75
+   },
   {
     "date": "1/17/20",
-    "value": 145.98
+    "driving": 145,
+    "walking": 113,
+    "transit": 75
   }
 ]

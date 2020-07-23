@@ -32,7 +32,9 @@
 		export let width = {width};
 		export let height = {height};
 		export let xVar = {xVar};
-		export let yVar = {yVar};
+		export let lineA = {lineA};
+		export let lineB = {lineB};
+		export let lineC = {lineC};
 
 	$: xScale = d3.scaleTime()
 		.range([0, width - padding.left - padding.right]);
@@ -60,14 +62,16 @@
 			.attr("transform",
 				  "translate(" + padding.left + "," + padding.top + ")");
 
+
+
 		svg.append("path")
         .datum(data)
         .attr("fill", "none")
-		  .attr("stroke", "#d51e2d")
+		  .attr("stroke", "red")
         .attr("stroke-width", 3)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
-          .y(function(d) { return yScale(d[yVar]) })
+          .y(function(d) { return yScale(d[lineA])})
       )
 
 		svg.append("path")
@@ -77,7 +81,17 @@
         .attr("stroke-width", 3)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
-          .y(function(d) { return yScale(d[yVar] + 10)})
+          .y(function(d) { return yScale(d[lineB])})
+      )
+
+		svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+		  .attr("stroke", "goldenrod")
+        .attr("stroke-width", 3)
+        .attr("d", d3.line()
+          .x(function(d) { return xScale(parseTime(d[xVar])) })
+          .y(function(d) { return yScale(d[lineC])})
       )
 
 		 svg.append("g")
