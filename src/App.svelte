@@ -6,7 +6,7 @@
 	import Map from './charts/Map.svelte'
 	import GraphicTitle from './components/GraphicTitle.svelte'
 	import GraphicFooter from './components/GraphicFooter.svelte'
-	import { group } from 'd3-array'
+	import { group, groups } from 'd3-array'
 
 	// gather data set. the Rollup JSON plugin loads everything with key "default", hence the second line below. (also filtering to California only)
 	import * as jsondata from '../public/datasets/parkland.json'
@@ -16,36 +16,7 @@
 		return d.city.indexOf(", CA") > -1
 	})
 
-	let array = Array.from(
-		group(mobility.default, d => d.region), ([key, value]) => ({key, value})
-	)
-
-	// console.log(
-		mobility.default
-		.forEach(e =>
-			Object.keys(e)
-				.filter(key => (key !== "region"))
-				.filter(key => (key !== "sub-region"))
-				.filter(key => (key !== "transportation_type"))
-				.map(key => (
-					({ region: e["region"], type: e["transportation_type"], date: key, value: e[key] })
-				))
-		)
-	// )
-
-		// mobility.default
-		// 	.filter(d => d.region === "Akron")
-		// 	.forEach(e =>
-		// 		console.log(
-		// 			Object.keys(e)
-		// 				.filter(key => (key !== "region"))
-		// 				.filter(key => (key !== "sub-region"))
-		// 				.filter(key => (key !== "transportation_type"))
-		// 				.map(key => (
-		// 					({ date: key, value: e[key] })
-		// 				))
-		// 		)
-		// 	)
+	let cities = ["Boston", "Houston", "Austin"]
 
 
 	export let width = Math.min(
@@ -64,33 +35,18 @@
 	title={"Today's chart"}
 	subhed={"A look at something etc"}
 />
-<LineChart
-	width={width * 0.33}
-	height={width * 0.33 * 0.66}
-	data={linetestdata.default}
-	xVar={"date"}
-	lineA={"driving"}
-	lineB={"walking"}
-	lineC={"transit"}
-/>
-<LineChart
-	width={width * 0.33}
-	height={width * 0.33 * 0.66}
-	data={linetestdata.default}
-	xVar={"date"}
-	lineA={"driving"}
-	lineB={"walking"}
-	lineC={"transit"}
-/>
-<LineChart
-	width={width * 0.33}
-	height={width * 0.33 * 0.66}
-	data={linetestdata.default}
-	xVar={"date"}
-	lineA={"driving"}
-	lineB={"walking"}
-	lineC={"transit"}
-/>
+{#each cities as city}
+<h3>{city + "-driving"}</h3>
+	<LineChart
+		width={width * 0.33}
+		height={width * 0.33 * 0.66}
+		data={mobility}
+		xVar={"date"}
+		lineA={city + "-driving"}
+		lineB={city + "-walking"}
+		lineC={city + "-transit"}
+	/>
+{/each}
 <!-- <BarChart
 	width={width}
 	height={width * 0.66}
