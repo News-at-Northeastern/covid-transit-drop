@@ -28,7 +28,7 @@
 	const padding = { top: 10, right: 25, bottom: 40, left: 25 };
 
 
-		export let data = {data};
+		export let  data = {data};
 		export let width = {width};
 		export let height = {height};
 		export let xVar = {xVar};
@@ -48,9 +48,11 @@
 	onMount(generateLineChart);
 
 	function generateLineChart() {
-		// console.log(data)
+		console.log(data)
 
 		xScale.domain(d3.extent(data, function(d) { return parseTime(d[xVar]); }))
+
+		console.log(xScale.domain())
 
 		// yScale.domain(data.map(function(o) { return o[xVar]; }))
 
@@ -68,7 +70,7 @@
         .datum(data)
         .attr("fill", "none")
 		  .attr("stroke", "red")
-        .attr("stroke-width", 3)
+        .attr("stroke-width", 1)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
           .y(function(d) { return yScale(d[lineA])})
@@ -78,7 +80,7 @@
         .datum(data)
         .attr("fill", "none")
 		  .attr("stroke", "teal")
-        .attr("stroke-width", 3)
+        .attr("stroke-width", 1)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
           .y(function(d) { return yScale(d[lineB])})
@@ -88,7 +90,7 @@
         .datum(data)
         .attr("fill", "none")
 		  .attr("stroke", "goldenrod")
-        .attr("stroke-width", 3)
+        .attr("stroke-width", 1)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
           .y(function(d) { return yScale(d[lineC])})

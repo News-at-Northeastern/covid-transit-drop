@@ -9,14 +9,15 @@
 	import { group, groups } from 'd3-array'
 
 	// gather data set. the Rollup JSON plugin loads everything with key "default", hence the second line below. (also filtering to California only)
-	import * as jsondata from '../public/datasets/parkland.json'
-	import * as linetestdata from '../public/datasets/linetestdata.json'
+	// import * as jsondata from '../public/datasets/parkland.json'
+	// import * as linetestdata from '../public/datasets/linetestdata.json'
 	import * as mobility from '../public/datasets/applemobility.json'
-	let dataset = jsondata.default.filter(d => {
-		return d.city.indexOf(", CA") > -1
-	})
+	import * as tests from '../public/datasets/linetestdata.json'
 
-	let cities = ["Boston", "Houston", "Austin"]
+	console.log(mobility.default)
+
+
+	let cities = ["Akron", "Albany"]
 
 
 	export let width = Math.min(
@@ -35,18 +36,22 @@
 	title={"Today's chart"}
 	subhed={"A look at something etc"}
 />
-{#each cities as city}
-<h3>{city + "-driving"}</h3>
-	<LineChart
-		width={width * 0.33}
-		height={width * 0.33 * 0.66}
-		data={mobility}
-		xVar={"date"}
-		lineA={city + "-driving"}
-		lineB={city + "-walking"}
-		lineC={city + "-transit"}
-	/>
-{/each}
+{#if mobility}
+	{#each cities as city}
+		<h3>{city}</h3>
+		<LineChart
+			width={width * 0.33}
+			height={width * 0.33 * 0.66}
+			data={mobility.default}
+			xVar={"date"}
+			lineA={city + "-driving"}
+			lineB={city + "-walking"}
+			lineC={city + "-transit"}
+		/>
+	{/each}
+{/if}
+
+
 <!-- <BarChart
 	width={width}
 	height={width * 0.66}
