@@ -17,7 +17,7 @@
 	console.log(mobility.default)
 
 
-	let cities = ["Akron", "Albany"]
+	let cities = ["New York City", "Washington DC", "Boston", "San Francisco - Bay Area", "Chicago", "Philadelphia", "Seattle", "Baltimore", "Pittsburgh", "Hartford", "New Haven", "Minneapolis", "Portland", "Buffalo", "Miami"]
 
 
 	export let width = Math.min(
@@ -38,11 +38,11 @@
 />
 {#if mobility}
 	{#each cities as city}
-		<h3>{city}</h3>
 		<LineChart
 			width={width * 0.33}
 			height={width * 0.33 * 0.66}
 			data={mobility.default}
+			title={city}
 			xVar={"date"}
 			lineA={city + "-driving"}
 			lineB={city + "-walking"}
@@ -50,21 +50,7 @@
 		/>
 	{/each}
 {/if}
-
-
-<!-- <BarChart
-	width={width}
-	height={width * 0.66}
-	data={dataset}
-	xVar={"city"}
-	yVar={"population"}
-/> -->
-<!-- <HoverCard
-	data={dataset}
-	xVar={"city"}
-	yVar={"population"}
-/> -->
 <GraphicFooter
-	source={"The Trust for Public Land"}
-	note={"Data includes the top 100 cities by population in the US"}
+	source={"Apple Maps"}
+	note={"Data for May 11-12 is not available."}
 />
