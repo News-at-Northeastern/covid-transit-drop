@@ -37,21 +37,33 @@ export let lineA = {lineA};
 export let lineB = {lineB};
 export let lineC = {lineC};
 
-let lines = [lineA, lineB, lineC]
+
+
+let lines = [lineA, lineB, lineC];
 
 $: xScale = d3.scaleTime()
 	.range([0, width - padding.left - padding.right]);
 
 $: yScale = d3.scaleLinear()
-	.domain([0, 200])
+	.domain([0, 240])
 	.range([height - padding.bottom, padding.top, 0]);
 
 const parseTime = d3.timeParse("%m/%d/%y");
 
+function generateAnno(value, type) {
+	if (type == 0) {
+		return "🚙 " + Math.round(value) + "%"
+	} else if (type == 1) {
+		return "👟 " + Math.round(value) + "%"
+	} else if (type == 2) {
+		return "🚎 " + Math.round(value) + "%"
+	}
+}
+
 onMount(generateLineChart);
 
 function generateLineChart() {
-	console.log(data)
+	// console.log(data)
 
 
 	xScale.domain(d3.extent(data, function(d) { return parseTime(d[xVar]); }))
@@ -116,13 +128,13 @@ function generateLineChart() {
 
 	lines.forEach(function(l,i){
 		svg.append("text")
-		.text(Math.round(data[data.length-1][l]) + "%")
-		.attr("text-anchor", "left")
-		.attr("font-size", "11px")
-		.attr("transform","translate(" +
-			xScale.range()[1] + "," +
-			yScale(data[data.length-1][l]) + ")"
-		)
+			.text(generateAnno(data[data.length-1][l], i))
+			.attr("text-anchor", "left")
+			.attr("font-size", "11px")
+			.attr("transform","translate(" +
+				(xScale.range()[1]-5) + "," +
+				yScale(data[data.length-1][l]) + ")"
+			)
 
 })
 
