@@ -45,6 +45,7 @@ export const top60 = ["Albuquerque",
 "Portland",
 "Raleigh",
 "Reno-Sparks",
+"Richmond",
 "Sacramento",
 "San Antonio",
 "San Diego",
@@ -56,4 +57,5 @@ export const top60 = ["Albuquerque",
 "Tucson",
 "Tulsa",
 "Virginia Beach",
-"Washington DC"]
+"Washington DC"
+]

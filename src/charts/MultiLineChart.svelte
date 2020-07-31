@@ -50,13 +50,23 @@ $: yScale = d3.scaleLinear()
 
 const parseTime = d3.timeParse("%m/%d/%y");
 
+function plusminus(value) {
+	if ((value-100) > 0) {
+		return "+" + Math.round(value-100)
+	} else if  ((value-100) == 0) {
+		return Math.round(value-100)
+	} else if ((value-100) < 0) {
+		return Math.round(value-100)
+	}
+}
+
 function generateAnno(value, type) {
 	if (type == 0) {
-		return "🚙 " + Math.round(value) + "%"
+		return "🚙 " + plusminus(value) + "%"
 	} else if (type == 1) {
-		return "👟 " + Math.round(value) + "%"
+		return "👟 " + plusminus(value) + "%"
 	} else if (type == 2) {
-		return "🚎 " + Math.round(value) + "%"
+		return "🚎 " + plusminus(value) + "%"
 	}
 }
 

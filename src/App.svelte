@@ -22,7 +22,14 @@
 
 	let cities = top60.top60
 
-	export let width = 300;
+	export let chartwidth;
+	if (window.innerWidth > 601) {
+		chartwidth = Math.min(320, ((window.innerWidth-20)/3))
+	} else {
+		chartwidth = window.innerWidth
+	}
+
+	console.log(chartwidth)
 
 
 </script>
@@ -35,14 +42,7 @@
 		grid-column-gap: 0;
 	}
 
-	@media only screen and (min-width:600px) {
-		div.grid {
-			grid-template-columns: auto auto;
-			grid-column-gap: 20px;
-		}
-	}
-
-	@media only screen and (min-width:900px) {
+	@media only screen and (min-width:601px) {
 		div.grid {
 			grid-template-columns: auto auto auto;
 			grid-column-gap: 20px;
@@ -53,15 +53,17 @@
 
 <GraphicTitle
 	title={"How travel patterns have changed in 2020, in 60 U.S. cities"}
-	subhed={"A look at something etc"}
+	subhed={""}
 />
+<p>People are walking and driving more now than they were in January, but transit usage is nearly half of what it was.</p>
+<p>The below data was released by Apple, using requests for Apple Maps directions. Each line measures the percentage change of requests for the three modes, measured from a mid-January baseline. Across the entire United States, requests for driving directions are up 34% from mid-January, and walking directions are up 18%. But transit routings tell a different story, down 47% in that same time period.</p>
 <div class="grid" id="grid-container">
 {#if mobility}
 	{#each cities as city}
-		<div class="grid-item"  bind:clientWidth={width}>
+		<div class="grid-item">
 			<LineChart
-				width={width}
-				height={width * 0.75}
+				width={chartwidth}
+				height={chartwidth * 0.75}
 				data={mobility.default}
 				title={city}
 				xVar={"date"}
