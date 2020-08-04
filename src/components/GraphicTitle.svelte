@@ -6,7 +6,15 @@
 
 <style>
    h2 {
-      margin-bottom:2rem;
+      font-family: "akkurat",sans-serif;
+       font-size: 1.8rem;
+       font-weight: 700;
+       letter-spacing: unset;
+       text-transform: unset;
+       border-top: unset;
+       border-bottom: unset;
+       line-height: unset;
+       padding: unset;
    }
 </style>
 

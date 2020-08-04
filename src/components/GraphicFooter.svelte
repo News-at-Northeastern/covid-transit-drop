@@ -21,6 +21,10 @@
       fill: #000;
    }
 
+   .graphic-footer-text {
+      margin:0;
+   }
+
 
 </style>
 
@@ -28,8 +32,5 @@
    <div id="footer-meta">
       <span class="graphic-footer-text">SOURCE: {source}</span>
       <span class="graphic-footer-text">NOTE: {note}</span>
-   </div>
-   <div id="footer-logo">
-      <img src="./sitelogo.svg" alt="News@Northeastern" />
    </div>
 </div>

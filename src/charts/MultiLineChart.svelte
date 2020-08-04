@@ -5,7 +5,7 @@ import { axisLeft, axisRight, axisTop, axisBottom } from 'd3-axis';
 import { line } from 'd3-shape';
 import { path } from 'd3-path';
 import { extent } from 'd3-array';
-import { select } from 'd3-selection';
+import { select, selectAll } from 'd3-selection';
 import { timeParse } from 'd3-time-format';
 
 let d3 = {
@@ -13,6 +13,7 @@ let d3 = {
 	scaleBand: scaleBand,
 	scaleTime: scaleTime,
 	select: select,
+	selectAll: selectAll,
 	axisLeft: axisLeft,
 	axisRight: axisRight,
 	axisBottom: axisBottom,
@@ -25,7 +26,7 @@ let d3 = {
 
 let el;
 
-const padding = { top: 10, right: 40, bottom: 40, left: 25 };
+const padding = { top: 10, right: 45, bottom: 40, left: 25 };
 
 
 export let  data = {data};
@@ -73,7 +74,7 @@ function generateAnno(value, type) {
 onMount(generateLineChart);
 
 function generateLineChart() {
-	// console.log(data)
+
 
 
 	xScale.domain(d3.extent(data, function(d) { return parseTime(d[xVar]); }))
@@ -93,18 +94,19 @@ function generateLineChart() {
 		.text(title)
 		.attr("transform","translate(" + 10 + ",10)")
 		.attr("text-anchor", "left")
+		.attr("font-size", "14px")
 
 
 
 	svg.append("path")
-	.datum(data)
-	.attr("fill", "none")
-	.attr("stroke", "#841e77")
-	.attr("stroke-width", 1)
-	.attr("d", d3.line()
-		.x(function(d) { return xScale(parseTime(d[xVar])) })
-		.y(function(d) { return yScale(d[lineA])})
-	)
+		.datum(data)
+		.attr("fill", "none")
+		.attr("stroke", "#841e77")
+		.attr("stroke-width", 1)
+		.attr("d", d3.line()
+			.x(function(d) { return xScale(parseTime(d[xVar])) })
+			.y(function(d) { return yScale(d[lineA])})
+		)
 
 	svg.append("path")
 		.datum(data)
@@ -137,17 +139,23 @@ function generateLineChart() {
 
 
 	lines.forEach(function(l,i){
+		console.log((data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]))
+		let offset;
+
+		if ((i < 2) && (Math.abs(data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]) < 15)) {
+			offset = yScale(data[data.length-1][l]) - 15;
+		} else {
+			offset = yScale(data[data.length-1][l]);
+		}
+
 		svg.append("text")
 			.text(generateAnno(data[data.length-1][l], i))
+			.attr("class","linelabel")
 			.attr("text-anchor", "left")
 			.attr("font-size", "11px")
-			.attr("transform","translate(" +
-				(xScale.range()[1]-5) + "," +
-				yScale(data[data.length-1][l]) + ")"
-			)
-
-})
-
+			.attr("x", xScale.range()[1]-5)
+			.attr("y", offset)
+	}) // lines ForEach
 
 }
 </script>
