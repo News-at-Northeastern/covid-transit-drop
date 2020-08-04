@@ -139,12 +139,26 @@ function generateLineChart() {
 
 
 	lines.forEach(function(l,i){
-		console.log((data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]))
 		let offset;
 
-		if ((i < 2) && (Math.abs(data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]) < 15)) {
+		if (
+			(i < 2) &&
+			((data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]) < 15) &&
+			((data[data.length-1][lines[i]] - data[data.length-1][lines[i-1]]) > 0)
+			)
+		{
 			offset = yScale(data[data.length-1][l]) - 15;
-		} else {
+		}
+		else if (
+			(i < 2) &&
+			((data[data.length-1][lines[i]] - data[data.length-1][lines[i+1]]) < 15) &&
+			((data[data.length-1][lines[i]] - data[data.length-1][lines[i+1]]) > 0)
+			)
+		{
+			offset = yScale(data[data.length-1][l]) - 15;
+		}
+		else
+		{
 			offset = yScale(data[data.length-1][l]);
 		}
 
