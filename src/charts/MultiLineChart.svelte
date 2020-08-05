@@ -6,7 +6,7 @@ import { line } from 'd3-shape';
 import { path } from 'd3-path';
 import { extent } from 'd3-array';
 import { select, selectAll } from 'd3-selection';
-import { timeParse } from 'd3-time-format';
+import { timeParse, timeFormat } from 'd3-time-format';
 
 let d3 = {
 	scaleLinear: scaleLinear,
@@ -21,6 +21,7 @@ let d3 = {
 	line: line,
 	extent: extent,
 	timeParse: timeParse,
+	timeFormat: timeFormat,
 	path: path
 }
 
@@ -132,7 +133,7 @@ function generateLineChart() {
 
 	svg.append("g")
 		.attr("transform", "translate(0," + (height-padding.bottom) + ")")
-		.call(d3.axisBottom(xScale));
+		.call(d3.axisBottom(xScale).tickFormat(d3.timeFormat('%b')));
 
 	svg.append("g")
 		.call(d3.axisLeft(yScale));
