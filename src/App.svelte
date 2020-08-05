@@ -24,7 +24,7 @@
 	if (window.innerWidth > 601) {
 		chartwidth = Math.min(320, ((document.getElementById("interactive").offsetWidth-20)/3))
 	} else {
-		chartwidth = ((document.getElementById("interactive").offsetWidth-20)/2)
+		chartwidth = ((document.getElementById("interactive").offsetWidth-3)/2)
 	}
 
 
@@ -35,7 +35,7 @@
 		width:100%;
 		display: grid;
 		grid-template-columns: auto auto;
-		grid-column-gap: 20px;
+		grid-column-gap: 3px;
 	}
 
 	.grid-item {
