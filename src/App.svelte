@@ -21,10 +21,13 @@
 	let cities = top60.top60
 
 	export let chartwidth;
+	export let chartheight;
 	if (window.innerWidth > 601) {
-		chartwidth = Math.min(320, ((document.getElementById("interactive").offsetWidth-20)/3))
+		chartwidth = Math.min(320, ((document.getElementById("interactive").offsetWidth-20)/3));
+		chartheight = chartwidth * 0.75;
 	} else {
-		chartwidth = ((document.getElementById("interactive").offsetWidth-3)/2)
+		chartwidth = ((document.getElementById("interactive").offsetWidth-3)/2);
+		chartheight = chartwidth;
 	}
 
 
@@ -61,7 +64,7 @@
 		<div class="grid-item">
 			<LineChart
 				width={chartwidth}
-				height={chartwidth * 0.75}
+				height={chartheight}
 				data={mobility.default}
 				title={city}
 				xVar={"date"}
