@@ -35,7 +35,7 @@
 		width:100%;
 		display: grid;
 		grid-template-columns: auto auto;
-		grid-column-gap: 3px;
+		grid-column-gap: 0px;
 	}
 
 	.grid-item {
