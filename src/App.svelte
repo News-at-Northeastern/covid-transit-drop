@@ -6,17 +6,10 @@
 	import Map from './charts/Map.svelte'
 	import GraphicTitle from './components/GraphicTitle.svelte'
 	import GraphicFooter from './components/GraphicFooter.svelte'
-	import * as top60 from './helpers/top60.js'
 	import { group, groups } from 'd3-array'
 
-	// gather data set. the Rollup JSON plugin loads everything with key "default", hence the second line below. (also filtering to California only)
-	// import * as jsondata from '../public/datasets/parkland.json'
-	// import * as linetestdata from '../public/datasets/linetestdata.json'
+	import * as top60 from './helpers/top60.js'
 	import * as mobility from '../public/datasets/applemobility.json'
-	import * as tests from '../public/datasets/linetestdata.json'
-
-
-
 
 	let cities = top60.top60
 
