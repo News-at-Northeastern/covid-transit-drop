@@ -3,6 +3,36 @@
 	margin: 0 auto;
 }
 
+.graphic-color-driving {
+	background-color: #841e77;
+	font-family: "Akkurat", sans-serif;
+	font-weight:bold;
+	padding:0px 3px;
+	color: white;
+	display:inline-block;
+	border-radius:2px;
+}
+
+.graphic-color-walking {
+	background-color: #02acac;
+	font-family: "Akkurat", sans-serif;
+	font-weight:bold;
+	padding:0px 3px;
+	color: white;
+	display:inline-block;
+	border-radius:2px;
+}
+
+.graphic-color-transit {
+	background-color: #d51e2d;
+	font-family: "Akkurat", sans-serif;
+	font-weight:bold;
+	padding:0px 3px;
+	color: white;
+	display:inline-block;
+	border-radius:2px;
+}
+
 #interactive > svg, #interactive > #svgContainer, .tick text {
 	max-width: 1000px;
 	margin: 0 auto;

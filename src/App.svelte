@@ -77,6 +77,6 @@
 {/if}
 </div>
 <GraphicFooter
-	source={"Apple Maps"}
+	source={'DATA: Apple Maps. ICONS: <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik, Flaticon</a>.'}
 	note={"Data runs from January 13 to July 28. Data for May 11-12 is not available."}
 />

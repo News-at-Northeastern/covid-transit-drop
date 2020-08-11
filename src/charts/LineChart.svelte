@@ -73,7 +73,7 @@
 		svg.append("path")
         .datum(data)
         .attr("fill", "none")
-		  .attr("stroke", "teal")
+		  .attr("stroke", "#02acac")
         .attr("stroke-width", 3)
         .attr("d", d3.line()
           .x(function(d) { return xScale(parseTime(d[xVar])) })
