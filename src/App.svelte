@@ -50,6 +50,7 @@
 <GraphicTitle
 	title={"How travel patterns have changed in 2020, in 60 U.S. cities"}
 	subhed={""}
+	width={chartwidth}
 />
 <div class="grid" id="grid-container">
 {#if mobility}
