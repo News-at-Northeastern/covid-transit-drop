@@ -72,5 +72,5 @@
 </div>
 <GraphicFooter
 	source={'DATA: Apple Maps. ICONS: <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik, Flaticon</a>.'}
-	note={"Data runs from January 13 to July 28. Data for May 11-12 is not available."}
+	note={"The data was assembled by Apple, using requests for directions made by Apple Maps users. Each line measures the percentage change of requests for the three modes of transportation, measured from a mid-January baseline."}
 />
