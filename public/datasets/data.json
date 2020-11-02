@@ -1,0 +1,332 @@
+[
+  {
+    "demographic": "18-29",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 27
+  },
+  {
+    "demographic": "18-29",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 18
+  },
+  {
+    "demographic": "18-29",
+    "ranking": 3,
+    "issue": "Climate",
+    "percentage": 7
+  },
+  {
+    "demographic": "18-29",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 6
+  },
+  {
+    "demographic": "18-29",
+    "ranking": 5,
+    "issue": "Police",
+    "percentage": 6
+  },
+  {
+    "demographic": "30-44",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 31
+  },
+  {
+    "demographic": "30-44",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 11
+  },
+  {
+    "demographic": "30-44",
+    "ranking": 3,
+    "issue": "Economy",
+    "percentage": 8
+  },
+  {
+    "demographic": "30-44",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 6
+  },
+  {
+    "demographic": "30-44",
+    "ranking": 5,
+    "issue": "Crime/Violence",
+    "percentage": 6
+  },
+  {
+    "demographic": "45-64",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 33
+  },
+  {
+    "demographic": "45-64",
+    "ranking": 2,
+    "issue": "Economy",
+    "percentage": 11
+  },
+  {
+    "demographic": "45-64",
+    "ranking": 3,
+    "issue": "Healthcare",
+    "percentage": 9
+  },
+  {
+    "demographic": "45-64",
+    "ranking": 4,
+    "issue": "Racism",
+    "percentage": 7
+  },
+  {
+    "demographic": "45-64",
+    "ranking": 5,
+    "issue": "Crime/Violence",
+    "percentage": 6
+  },
+  {
+    "demographic": "65+",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 36
+  },
+  {
+    "demographic": "65+",
+    "ranking": 2,
+    "issue": "Economy",
+    "percentage": 10
+  },
+  {
+    "demographic": "65+",
+    "ranking": 3,
+    "issue": "Crime/Violence",
+    "percentage": 7
+  },
+  {
+    "demographic": "65+",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 6
+  },
+  {
+    "demographic": "65+",
+    "ranking": 5,
+    "issue": "Unemployment",
+    "percentage": 5
+  },
+  {
+    "demographic": "African American",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 33
+  },
+  {
+    "demographic": "African American",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 25
+  },
+  {
+    "demographic": "African American",
+    "ranking": 3,
+    "issue": "Police",
+    "percentage": 9
+  },
+  {
+    "demographic": "African American",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 5
+  },
+  {
+    "demographic": "African American",
+    "ranking": 5,
+    "issue": "Crime/Violence",
+    "percentage": 4
+  },
+  {
+    "demographic": "Asian American",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 40
+  },
+  {
+    "demographic": "Asian American",
+    "ranking": 2,
+    "issue": "Gun Control",
+    "percentage": 10
+  },
+  {
+    "demographic": "Asian American",
+    "ranking": 3,
+    "issue": "Poverty",
+    "percentage": 9
+  },
+  {
+    "demographic": "Asian American",
+    "ranking": 4,
+    "issue": "Economy",
+    "percentage": 8
+  },
+  {
+    "demographic": "Asian American",
+    "ranking": 5,
+    "issue": "Crime/Violence",
+    "percentage": 4
+  },
+  {
+    "demographic": "Democrats",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 40
+  },
+  {
+    "demographic": "Democrats",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 14
+  },
+  {
+    "demographic": "Democrats",
+    "ranking": 3,
+    "issue": "Healthcare",
+    "percentage": 9
+  },
+  {
+    "demographic": "Democrats",
+    "ranking": 4,
+    "issue": "Climate",
+    "percentage": 7
+  },
+  {
+    "demographic": "Democrats",
+    "ranking": 5,
+    "issue": "Economy",
+    "percentage": 5
+  },
+  {
+    "demographic": "Hispanic",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 36
+  },
+  {
+    "demographic": "Hispanic",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 13
+  },
+  {
+    "demographic": "Hispanic",
+    "ranking": 3,
+    "issue": "Economy",
+    "percentage": 6
+  },
+  {
+    "demographic": "Hispanic",
+    "ranking": 4,
+    "issue": "Climate",
+    "percentage": 6
+  },
+  {
+    "demographic": "Hispanic",
+    "ranking": 5,
+    "issue": "Healthcare",
+    "percentage": 6
+  },
+  {
+    "demographic": "Independents",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 31
+  },
+  {
+    "demographic": "Independents",
+    "ranking": 2,
+    "issue": "Racism",
+    "percentage": 10
+  },
+  {
+    "demographic": "Independents",
+    "ranking": 3,
+    "issue": "Economy",
+    "percentage": 8
+  },
+  {
+    "demographic": "Independents",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 8
+  },
+  {
+    "demographic": "Independents",
+    "ranking": 5,
+    "issue": "Crime/Violence",
+    "percentage": 5
+  },
+  {
+    "demographic": "Republicans",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 25
+  },
+  {
+    "demographic": "Republicans",
+    "ranking": 2,
+    "issue": "Economy",
+    "percentage": 13
+  },
+  {
+    "demographic": "Republicans",
+    "ranking": 3,
+    "issue": "Crime/Violence",
+    "percentage": 9
+  },
+  {
+    "demographic": "Republicans",
+    "ranking": 4,
+    "issue": "Healthcare",
+    "percentage": 6
+  },
+  {
+    "demographic": "Republicans",
+    "ranking": 5,
+    "issue": "Abortion",
+    "percentage": 6
+  },
+  {
+    "demographic": "White",
+    "ranking": 1,
+    "issue": "COVID",
+    "percentage": 30
+  },
+  {
+    "demographic": "White",
+    "ranking": 2,
+    "issue": "Economy",
+    "percentage": 10
+  },
+  {
+    "demographic": "White",
+    "ranking": 3,
+    "issue": "Healthcare",
+    "percentage": 8
+  },
+  {
+    "demographic": "White",
+    "ranking": 4,
+    "issue": "Crime/Violence",
+    "percentage": 8
+  },
+  {
+    "demographic": "White",
+    "ranking": 5,
+    "issue": "Racism",
+    "percentage": 6
+  }
+]

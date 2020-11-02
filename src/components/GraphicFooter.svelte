@@ -8,7 +8,7 @@
 <style>
    #graphic-footer {
       display: grid;
-      grid-template-columns: 3fr 2fr
+      grid-template-columns: 1fr
    }
 
    #footer-meta span {
@@ -27,9 +27,6 @@
 <div id="graphic-footer">
    <div id="footer-meta">
       <span class="graphic-footer-text">SOURCE: {source}</span>
-      <span class="graphic-footer-text">NOTE: {note}</span>
-   </div>
-   <div id="footer-logo">
-      <img src="./sitelogo.svg" alt="News@Northeastern" />
+      <!-- <span class="graphic-footer-text">NOTE: {note}</span> -->
    </div>
 </div>

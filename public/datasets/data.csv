@@ -1,0 +1,56 @@
+demographic,ranking,issue,percentage
+Democrats,1,COVID,40
+Democrats,2,Racism,14
+Democrats,3,Healthcare,9
+Democrats,4,Climate,7
+Democrats,5,Economy,5
+Republicans,1,COVID,25
+Republicans,2,Economy,13
+Republicans,3,Crime/Violence,9
+Republicans,4,Healthcare,6
+Republicans,5,Abortion,6
+Independents,1,COVID,31
+Independents,2,Racism,10
+Independents,3,Economy,8
+Independents,4,Healthcare,8
+Independents,5,Crime/Violence,5
+18-29,1,COVID,27
+18-29,2,racism,18
+18-29,3,climate,7
+18-29,4,healthcare,6
+18-29,5,police,6
+30-44,1,COVID,31
+30-44,2,racism,11
+30-44,3,economy,8
+30-44,4,healthcare,6
+30-44,5,crime/violence,6
+45-64,1,COVID,33
+45-64,2,economy,11
+45-64,3,healthcare,9
+45-64,4,racism,7
+45-64,5,crime/violence,6
+65+,1,COVID,36
+65+,2,economy,10
+65+,3,crime/violence,7
+65+,4,healthcare,6
+65+,5,unemployment,5
+Asian American,1,COVID,40
+Asian American,2,gun_control,10
+Asian American,3,poverty,9
+Asian American,4,economy,8
+Asian American,5,crime,4
+African American,1,COVID,33
+African American,2,racism,25
+African American,3,police,9
+African American,4,healthcare,5
+African American,5,crime/violence,4
+Hispanic,1,COVID,36
+Hispanic,2,racism,13
+Hispanic,3,economy,6
+Hispanic,4,climate,6
+Hispanic,5,healthcare,6
+White,1,COVID,30
+White,2,economy,10
+White,3,healthcare,8
+White,4,crime/violence,8
+White,5,racism,6
