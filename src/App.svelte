@@ -4,6 +4,7 @@
 	import GraphicTitle from './components/GraphicTitle.svelte'
 	import GraphicFooter from './components/GraphicFooter.svelte'
 	import * as jsondata from '../public/datasets/data.json'
+	// import * as jsondata from '//news.northeastern.edu/interactive/2020/11/covid-states-issues/datasets/data.json'
 
 	let dataset;
 

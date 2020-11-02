@@ -1,7 +1,3 @@
-.article-content, #interactive{
-	max-width: 800px;
-	margin: 0 auto;
-}
 
 #interactive > svg, #interactive > #svgContainer, .tick text {
 	max-width: 1000px;
@@ -12,6 +8,8 @@
 #interactive {
 	color: #333;
 	font-family: "akkurat", -apple-system, sans-serif;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 

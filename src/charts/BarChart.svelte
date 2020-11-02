@@ -97,7 +97,11 @@
 		 // axes
 		 svg.append("g")
 			 .attr("transform", "translate(0," + (height-padding.bottom) + ")")
-			 .call(d3.axisBottom(xScale).ticks(3));
+			 .call(
+				 d3.axisBottom(xScale)
+				 .ticks(3)
+				 .tickFormat(function(d){return d + "%";})
+			 );
 
 		 svg.append("g")
 				 .call(d3.axisLeft(yScale).tickSize(0));
